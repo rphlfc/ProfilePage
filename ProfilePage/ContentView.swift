@@ -10,7 +10,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        ZStack(alignment: .bottom) {
+            Image("profile")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: UIScreen.main.bounds.width)
+                .edgesIgnoringSafeArea(.all)
+                
+            ProfileInfoView()
+                .cornerRadius(10)
+                .padding()
+        }
     }
 }
 
